@@ -2,10 +2,51 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>DailyUI::001 - Sign up</title>
-        <style></style>
+        <link href="../common/reset.css" rel="stylesheet" >
+        <link href="../common/common.css" rel="stylesheet" >
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        Hi
+        <header>
+            <nav>
+                <a href="https://github.com/cintiamh/DailyUI">Home</a>
+            </nav>
+        </header>
+        <section class="signupForm">
+            <form>
+                <div class="formField">
+                    <label for="email">e-mail</label>
+                    <input aria-label="email" type="email" name="email" id="email" />
+                </div>
+                <div class="formField">
+                    <label for="password">Password</label>
+                    <input aria-label="password" type="password" name="password" id="password" />
+                </div>
+                <button type="submit">Sign up</button>
+            </form>
+        </section>
+        <script>
+            const emailField = document.getElementById('email');
+            emailField.addEventListener('focus', () => {
+                emailField.parentNode.classList.add('active');
+            });
+            emailField.addEventListener('blur', () => {
+                if (!emailField.value) {
+                    emailField.parentNode.classList.remove('active');
+                }
+            });
+
+            const passwordField = document.getElementById('password');
+            passwordField.addEventListener('focus', () => {
+                passwordField.parentNode.classList.add('active');
+            });
+            passwordField.addEventListener('blur', () => {
+                if (!passwordField.value) {
+                    passwordField.parentNode.classList.remove('active');
+                }
+            });
+        </script>
     </body>
 </html>
