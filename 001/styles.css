@@ -1,3 +1,8 @@
+h1 {
+    font-size: 24px;
+    padding: 12px;
+}
+
 .formField {
     border: solid 1px #ccc;
     margin: 12px;
